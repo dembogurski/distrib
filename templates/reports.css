@@ -1,0 +1,41 @@
+/**
+*
+* @FileName: reports.css
+* @Date: 18-05-2012
+* @Author: Doglas A. Dembogurski Feix
+*
+* 
+*/
+ 
+
+    th{
+      text-align:center;
+      font-size:12px;
+      font-weight:bolder;
+      
+    }
+ 
+    .item{
+      text-align:left;
+      padding-left:3px;
+      font-size:11px;  
+    }
+   .itemc{
+      text-align:left;
+      padding-left:3px;
+      font-size:11px;
+      text-align:center;
+    }
+    .num{
+        text-align:right;
+      padding-right:3px;
+      font-size:11px; 
+    }
+    .even{
+       background-color:lightgray;
+    }
+    .odd{
+       background-color:white;
+    }
+ 
+

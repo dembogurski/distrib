@@ -1,0 +1,312 @@
+
+<!-- begin: start_xul -->
+<?xml-stylesheet href="templates/skin.css" type="text/css"?>
+<window 
+title="ycube.net - plus RAD"
+name="{name}" 
+id="{name}"
+resizable="yes"
+titlemodifier="ycube.net - plus RAD"
+xmlns="http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul"  
+encoding="ISO-8859-1"  >
+
+<vbox flex="1" style="overflow:auto">
+
+<toolbox id="main_tb" flex="1" >
+
+<!-- end:   start_xul -->
+
+ 
+
+<!-- begin: start_menu -->
+
+	<keyset>
+		<key id="release"  keycode="VK_F2"  oncommand="prepare_releases();" />
+		<key id="escape"  keycode="VK_ESCAPE"  oncommand="goBack();" />
+	</keyset>
+	<script>
+		startScreen = 0;
+	</script>
+	<grid class="headerbar">   
+
+	<vbox align="center">
+ 		<description value="{HTML_title}" orient="center"
+ 		id="title"
+		 style="font-size:18pt; font-weight:bold; color:white"/>
+	</vbox>
+
+	<rows>
+			<row/>
+			<row/>
+	</rows>
+		
+		<columns>
+			<column flex="1">
+				<vbox align="left">
+					<description value="RAD Plus [ {version} ]" style="font-size:10pt;
+					color:white"/>
+					<description value="ycube.net" style="font-size:10pt;
+					color:white"/>
+				</vbox>
+			</column>
+					
+			<column flex="1">
+				<vbox align="right">
+					<description value="{HTML_project}" style="font-size:10pt;
+					color:white"/>
+					<description value="{HTML_user}" style="font-size:10pt;
+					color:white"/>
+				</vbox>
+			</column>
+			
+		</columns>			
+ 	</grid> 
+
+	<menubar id="Principal-menu">
+<!-- end:   start_menu -->		
+		
+
+<!-- begin: menu_header -->
+
+		<menu id="{name}" label="{HTML_alias}" tooltiptext="{HTML_help}" {disabled}>
+<!-- end:   menu_header -->
+
+<!-- begin: menu_header_startpopup -->
+			<menupopup id="{popup}" tooltiptext="{HTML_help}">
+<!-- end:   menu_header_startpopup -->
+
+<!-- begin: menu_header_endpopup -->
+			</menupopup>
+<!-- end:   menu_header_endpopup -->
+
+<!-- begin: menu_header_end -->
+		</menu>
+<!-- end:   menu_header_end -->
+
+
+
+<!-- begin: menu_element_item -->
+				<menuitem id="{e_name}" label="{HTML_e_alias}" {command}
+				tooltiptext="{HTML_e_help}" />
+<!-- end:   menu_element_item -->
+
+<!-- begin: menu_element -->
+				<menu id="{e_name}" label="{HTML_e_alias}" tooltiptext="{HTML_e_help}">
+<!-- end:   menu_element -->
+
+<!-- begin: menu_element_startpopup -->
+					<menupopup id="{e_popup}" tooltiptext="HTML_{e_help}">
+<!-- end:   menu_element_startpopup -->
+
+<!-- begin: menu_element_endpopup -->
+					</menupopup>
+<!-- end:   menu_element_endpopup -->
+
+<!-- begin: menu_element_end -->
+				</menu>
+<!-- end:   menu_element_end -->
+
+
+<!-- begin: submenu -->
+						<menuitem id="{name}" label="{HTML_alias}" {command}
+						tooltiptext="{HTML_help}"/>
+<!-- end:   submenu -->
+
+
+
+<!-- begin: end_menu -->
+	</menubar>
+<!-- end:   end_menu -->
+
+
+
+<!-- begin: start_login -->
+	<keyset>
+		<key id="login-button"  keycode="VK_RETURN"  {onkey} />
+		<key id="login-button"  keycode="VK_ENTER"   {onkey} />
+	</keyset>
+	
+	<script>
+		startScreen = 1;
+	</script>
+	
+	<vbox flex="1" align="center" pack="center" class="login"   >
+		<label value="ycube RAD Plus" style="font-size: 16px;color:white"/>
+		<grid class="login_form">
+			<columns>
+				<column/>
+				<column/>
+			</columns>
+			<rows>
+<!-- end:   start_login -->			
+			
+<!-- begin: login_error -->		
+			<spacer />				
+			<description> USERNAME / PASSWORD Error! </description>		
+			<spacer />
+<!-- end:   login_error -->		
+	
+<!-- begin: project_error -->		
+			<spacer />				
+			<description> PROYECTO INEXISTENTE! </description>		
+			<spacer />
+			<row>
+			<spacer />				
+			<description>{project} </description>		
+			<spacer />	
+
+<!-- end:   project_error -->			
+			
+
+<!-- begin: get_login -->						
+				<row>
+				<spacer />				
+				<description>Project: {project} </description>		
+				<spacer />	
+				</row>
+				
+				<row>
+					<label value="Username"/>
+					<textbox id="loginUser" style="width:11em"/>
+				</row>
+				<row>
+					<label value="Password"/>
+					<textbox id="loginPass" style="width:11em"
+					 type="password"/>
+				</row>
+				<row>
+					<spacer/>
+<!-- end:   get_login -->
+
+
+<!-- begin: end_login -->
+				</row>
+			</rows>
+		</grid>
+			<hbox>
+				<button label="" id="messagebutton" hidden="true"/>		
+			</hbox>
+	</vbox>
+<!-- end:   end_login -->
+
+<!-- begin: error -->
+	<vbox flex="1" align="center" pack="center" style="background-color:#444">
+		<label value="ycube RAD Plus " style="font-size: 16px"/>
+		<grid style="background-color:#999;padding:40px;border-top: 5px solid #bbb; border-left: 5px solid #bbb; border-bottom: 5px solid #555;border-right: 5px solid #555">
+			<columns>
+				<column/>
+				<column/>
+			</columns>
+			<rows>
+				<row>
+					<spacer />	
+				</row>
+				<row>
+					<label value="ERROR" style="width:16px"/>
+					<label value="{HTML_error}" style="width:16px" />
+				</row>
+				<row>
+					<spacer/>
+				</row>
+			</rows>
+		</grid>
+	</vbox>
+<!-- end:   error -->
+
+<!-- begin: illegal_access -->
+	<vbox flex="1" align="center" pack="center" style="background-color:#444">
+		<label value="ycube RAD Plus " style="font-size: 16px"/>
+		<grid style="background-color:#999;padding:40px;border-top: 5px solid #bbb; border-left: 5px solid #bbb; border-bottom: 5px solid #555;border-right: 5px solid #555">
+			<columns>
+				<column/>
+				<column/>
+			</columns>
+			<rows>
+				<row>
+					<spacer />	
+				</row>
+				<row>
+					<label value="ACCESS DENIED" style="width:16px"/>
+					<label value="This is a not authorized access try" style="width:16px" />
+				</row>
+				<row>
+					<spacer/>
+				</row>
+			</rows>
+		</grid>
+	</vbox>
+<!-- end:   illegal_access -->
+
+
+<!-- begin: start_comment -->
+	<vbox flex="1">
+		<spacer height="20" />
+		
+			<columns flex="1">
+				<column/>
+				<column />				
+			</columns>
+			<rows flex="1">
+<!-- end: start_comment -->
+
+<!-- begin: start_comment_line -->
+				<row flex="1">
+				<hbox flex="1">
+					<label flex="1" style="font-size: 16px">
+					Rel: {number}
+					{date} 
+					</label>
+				</hbox>
+				</row>
+				
+
+<!-- end:   start_comment_line -->
+
+<!-- begin: comment_line -->
+				<row >
+					<spacer width="60" />
+					<description flex="1" style="font-size: 14px">{comment} 
+					</description>
+				</row>
+<!-- end:   comment_line -->
+
+
+<!-- begin: end_comment_line -->
+				<spacer height="40" />
+<!-- end:   end_comment_line -->
+
+
+<!-- begin: end_comment -->
+			</rows>
+	
+	</vbox>
+<!-- end:   end_comment -->
+
+
+<!-- begin: end_xul -->
+
+	<button label="" id="messagebutton" tooltiptext="Message"
+	hidden="true"/>
+
+	
+	<script> 
+	document.onfocus=reload_ ;
+	</script> 
+
+	<textbox id="transport_" value="" hidden="true"/>
+	<textbox id="return_" value="" hidden="true"/>
+	<textbox id="reload_" value="0" hidden="true" ref=""/>
+	<textbox id="keybuffer_" value="0" hidden="true"/>
+	
+	
+	<!--  <iframe id="RSIFrame" 
+		name  ="RSIFrame"
+		style ="width:0px; height:0px; border: 0px"
+		src   ="{URL}">
+	</iframe> -->
+
+	</toolbox>
+	</vbox>
+</window>
+
+<!-- end:   end_xul -->

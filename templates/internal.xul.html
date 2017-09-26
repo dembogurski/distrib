@@ -1,0 +1,65 @@
+
+<!-- begin: start_xul -->
+<window
+title="ycube.net - plus RAD"
+titlemodifier="ycube.net - plus RAD"
+xmlns="http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul"  
+encoding="UTF-8">
+<script src="./include/internal.js" type="application/x-javascript" encoding="UTF-8"/> 
+
+<toolbox flex="1" >
+<!-- end:   start_xul -->
+
+	
+<!-- begin: title -->	
+	<label value="{title}" style="font-size: 16px"/>
+<!-- end: 	title -->	
+
+<!-- begin: end_xul -->
+	</toolbox>
+<iframe id="validate" name="validate" src="" width="0" height="0"/>
+<textbox id="transport" value="" hidden="true"/>
+</window>
+
+<!-- end:   end_xul -->
+
+
+<!-- begin: error -->
+	<vbox flex="1" align="center" pack="center" style="background-color:#444">
+		<label value="ycube RAD Plus " style="font-size: 16px"/>
+		<grid style="background-color:#999;padding:40px;border-top: 5px solid #bbb; border-left: 5px solid #bbb; border-bottom: 5px solid #555;border-right: 5px solid #555">
+			<columns>
+				<column/>
+				<column/>
+			</columns>
+			<rows>
+				<row>
+					<spacer />	
+				</row>
+				<row>
+					<label value="ERROR" style="width:16px"/>
+					<label value="{HTML_error}" style="width:16px" />
+				</row>
+				<row>
+					<spacer/>
+				</row>
+			</rows>
+		</grid>
+	</vbox>
+<!-- end:   error -->
+
+<!-- begin: checkbox -->
+	<checkbox id="check{id}" label="{label}" ref="{ref}" {selected} />
+<!-- end:   checkbox -->
+
+<!-- begin: applic_button -->
+	<hbox>
+		<button label="{HTML_name}" value="{value}" id="applicbutton" tooltiptext="{help}"
+				{command}/>
+	</hbox>				
+<!-- end:   aplic_button -->
+
+<!-- begin: num_var -->
+	<textbox id="numvar" value="{variables}" hidden="true"/>
+<!-- end:   num_var -->
+	

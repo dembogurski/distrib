@@ -1,0 +1,231 @@
+
+
+
+<!-- begin: start_form -->
+	<vbox id="title_vbox" align="center">
+ 		<description value="{HTML_title}" orient="center"
+		 style="font-size:18pt; font-weight:bold; color:black"/>
+	</vbox>
+	<vbox id="title_dynamic" />
+	
+	<textbox id="debug_" value="" hidden="true"/>
+   	<grid id="grid" >
+		<columns>
+			<column/>
+			<column flex="0"/>
+		</columns>
+		<rows id="rows">
+	
+<!-- end:   start_form -->
+	<textbox id="reload_" value="0" hidden="true"/>
+
+
+
+
+<!-- begin: text_input --> 
+		<row>
+			<label control="{name}" value="{HTML_label_name}" tooltiptext="{help}"/>
+			<hbox>
+			<textbox id="edit{id}" ref="{name}" value="{HTML_value}" {length} {readonly}
+			 onblur="return blur_({id})" onfocus="focus_({id})" flex="0"/>
+			 </hbox>
+			<textbox id="var{id}" value="" ref="{ref}" hidden="true" />
+		</row>
+<!-- end:   text_input --> 
+						
+
+<!-- begin: int_proc --> 
+		<row>
+			<label control="{name}" value="{HTML_label_name}" tooltiptext="{help}"/>
+			<hbox>
+			<button label="{value}" id="b_{name}" value="" ref="{name}"
+			 tooltiptext="{help}"	
+			{command}/>
+			</hbox>
+			<textbox id="{name}" value="{value}" ref="{ref}" hidden="true" />			
+		</row>
+<!-- end:   int_proc --> 
+
+
+<!-- begin: hidden_var -->
+	<textbox id="{id}" value="{value}" hidden="true"/>
+<!-- end:   hidden_var -->
+
+
+
+<!-- begin: end_form --> 
+		</rows>
+	</grid>
+<!-- end:   end_form --> 
+
+
+
+<!-- begin: button -->
+	<button label="{HTML_name}" id="{id}" tooltiptext="{help}"/>
+<!-- end:   button -->
+
+<!-- begin: close_button -->
+	<button label="{HTML_name}" id="closebutton" tooltiptext="{help}"
+			onclick="goBack();"/>
+<!-- end:   close_button -->
+
+<!-- begin: insert_button -->
+	<button label="{HTML_name}" id="acceptbutton" tooltiptext="{help}"
+	{command} />
+<!-- end:   insert_button -->
+
+<!-- begin: ins_cons_button -->
+	<button label="{HTML_name}" id="insconsbutton" tooltiptext="{help}"
+	{command} hidden="true"/>
+<!-- end:   insert_button -->
+
+<!-- begin: property_button -->
+	<button label="{HTML_name}" id="propertybutton" tooltiptext="{help}"
+	{command} />
+<!-- end:   property_button -->
+
+<!-- begin: change_button -->
+	<button label="{HTML_name}" id="changebutton" tooltiptext="{help}"
+			{command}/>
+<!-- end:   change_button -->
+
+<!-- begin: next_button -->
+	<button label="{HTML_name}" id="nextbutton" tooltiptext="{help}"
+			{command}/>
+<!-- end:   next_button -->
+
+<!-- begin: previous_button -->
+	<button label="{HTML_name}" id="previousbutton" tooltiptext="{help}"
+			{command}/>
+<!-- end:   previous_button -->
+
+
+
+<!-- begin: enableChange -->
+	<button label="{HTML_name}" id="enableChange" tooltiptext="{help}"
+			{hidden} {command}/>
+<!-- end:   enableChange -->
+
+<!-- begin: acceptChange -->
+	<button label="{HTML_name}" id="acceptChange" tooltiptext="{help}"
+			hidden="true"	{command}/>
+<!-- end:   acceptChange -->
+
+<!-- begin: accept_button -->
+	<button label="{HTML_name}" id="acceptbutton" tooltiptext="{help}"
+			hidden="true" {command}/>
+<!-- end:   accept_button -->
+
+
+
+
+<!-- begin: delete_button -->
+	<button label="{HTML_name}" id="deletebutton" tooltiptext="{help}"
+			{command}/>
+<!-- end:   delete_button -->
+
+<!-- begin: hbox_start --> 
+	<hbox flex="{flex}">
+<!-- end:   hbox_start --> 
+
+<!-- begin: hbox_stop --> 
+	</hbox>
+<!-- end:   hbox_stop --> 
+
+
+<!-- begin: vbox_start --> 
+	<vbox flex="{flex}">
+<!-- end:   vbox_start --> 
+
+<!-- begin: vbox_stop --> 
+	</vbox>
+<!-- end:   vbox_stop --> 
+
+
+
+
+
+<!-- begin: start_list -->
+	<vbox align="center">
+ 		<description value="{HTML_title}" orient="center"
+		 style="font-size:14pt; font-weight:bold; color:black"/>
+	</vbox>
+	<listbox id="list" flex="1" {command}>
+<!-- end:   start_list -->
+
+<!-- begin: end_list -->
+	</listbox>
+<!-- end:   end_list -->
+
+<!-- begin: start_list_head -->
+		<listhead >
+<!-- end:   start_list_head -->
+<!-- begin: list_head -->
+			<listheader label="{data}" tooltiptext="{HTML_help}" {align}/>
+<!-- end:   list_head -->
+<!-- begin: stop_list_head -->
+			<listheader label="" tooltiptext=" "/>
+		</listhead>
+<!-- end:   stop_list_head -->
+
+<!-- begin: start_list_col -->
+		<listcols>
+<!-- end:   start_list_col -->
+<!-- begin: list_col -->
+			<listcol flex="1" />
+			<splitter />
+<!-- end:   list_col -->
+
+<!-- begin: stop_list_col -->
+			<listcol flex="0" />
+		</listcols>
+<!-- end:   stop_list_col -->
+
+
+<!-- begin: start_list_cell -->
+		<listitem id="{id}" >
+<!-- end:   start_list_cell -->
+
+<!-- begin: start_zebra -->
+		<listitem id="{id}"	style="background-color:{zebra_color}" >
+<!-- end:   start_zebra -->
+
+<!-- begin: list_cell -->
+			<listcell id="{id}" label="{HTML_data}" {align} />
+<!-- end:   list_cell -->
+<!-- begin: stop_list_cell -->
+			<listcell id="{id}" label=" " />
+		</listitem>
+<!-- end:   stop_list_cell -->
+
+<!-- begin: start_tot_cell -->
+		<listitem id="{id}" style="background-color:lightgrey">
+<!-- end:   start_tot_cell -->
+
+<!-- begin: tot_cell -->
+			<listcell id="{id}" label="{HTML_data}" 
+			style="font-weight:bold;text-align: right"/>
+<!-- end:   tot_cell -->
+
+
+
+
+<!-- begin: start_sel_list -->
+		<row>
+			<label control="{name}" value="{HTML_label_name}" tooltiptext="{help}"/>
+		<hbox>
+		<textbox id="var{id}" value="{HTML_value}" ref="{ref}" hidden="true" />		
+		<menulist label="{HTML_label}" id="edit{id}" ref="{name}" value="{HTML_value}"
+		onblur="blur_({id})" onfocus="focus_({id})" >
+			<menupopup>		
+<!-- end:   start_sel_list -->
+
+<!-- begin: sel_list_element -->
+				<menuitem label="{HTML_label}" oncommand="{command}"	{selected}/>	
+<!-- end:   sel_list_element -->
+<!-- begin: stop_sel_list -->
+			</menupopup>
+		</menulist>		
+		</hbox>
+		</row>
+<!-- end:   stop_sel_list -->

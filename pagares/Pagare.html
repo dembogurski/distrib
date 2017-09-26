@@ -1,0 +1,150 @@
+<!-- begin: general_header noeval -->
+<!DOCTYPE html>
+   
+<script src='../include/jquery-1.11.1.js'></script>
+<script type="text/javascript" src="pagare.js" ></script>  
+ 
+<style>
+.sub{
+   border-style: groove;
+   border-width: 0px 0px 2px 0px;
+   font-size: 12px;
+ }
+ .no_border{  
+   border-width: 0px;
+   font-size: 12px;
+ }
+ .monto{
+   border-style: groove;
+   border-width: 0px 0px 0px 0px; 
+   font-size: 16px;
+   text-align: right;
+ }
+ .cuerpo{
+     font-size:13px;
+ }
+ @media print{
+     .config{
+         display:none;
+     }
+ }
+</style>
+<!-- end:   general_header -->
+
+
+<!-- begin: start_query0 -->
+<input type="hidden" id="papar_size" value="{papar_size}">
+<table style="text-align: left; width: 99%;" border="0" cellpadding="0" cellspacing="0">
+     
+    <thead>
+<tr> <td colspan="50"> 
+	<table style="text-align: left; width: 100%;" border="0"  cellpadding="0" cellspacing="0">
+	  <tbody>
+         <tr>
+            <td  colspan="3"> <img src="../images/logo_comercial_ocampos.jpg" border="0" alt="{denominacion}" width="180px" height="60px" >  </td> 
+         </tr>
+
+		<tr>
+           <td width="20%"></td>
+           <td style="text-align: center;width:50%"><big style="font-weight: bold;"><big>PAGAR&Eacute; A LA ORDEN</big> </big> </td>
+		   <td style="text-align: left;width:30%;padding-left:6px">
+                   <big>Ref.:&nbsp;<input style="font-size:17px" readonly="readonly" type="text" size="10" value="{factura}~~~" /> </big><br>
+             <big>N&deg;.:&nbsp;{pg_nro}&nbsp;/&nbsp;{barra} ~~~</big><br>
+             <small><small>{user} - {time}</small></small>
+           </td>
+		</tr>
+	  </tbody>
+	</table>
+</td></tr>
+<!-- end:   start_query0 -->
+
+<!-- begin: header0 -->
+ 
+</thead>
+<tfoot>
+	<tr><td colspan="50"></td></tr>
+</tfoot>
+<!-- end:   header0 -->
+
+<!-- begin: query0_data_row -->
+    <tr>
+    <td>
+     <table border="0" cellpadding="4" cellspacing="4" width="100%" style="font-size:17px;text-align:justify;">
+       <tr>
+        <td style="height:80px;"><b>VENCIMIENTO:&nbsp;&nbsp;
+                <input class="sub" style="text-align:center;font-weight: bolder;" type="text" size="1" maxlength="2" value="{query0_DIA_VENC}" />&nbsp;/ 
+                <input class="sub" style="text-align:center;font-weight: bolder;" type="text" size="9" maxlength="10" value="{query0_MES_VENC_LETRAS}" /> 
+                &nbsp;/
+                <input class="sub" style="text-align:center;font-weight: bolder;" type="text" size="4" maxlength="4" value="{query0_ANIO_VENC}" /> 
+                &nbsp; 
+            </b>
+        </td>
+        <td style="text-align:right;width: 40%"><b>IMPORTE:&nbsp;{MONEDA}.&nbsp;<input type="text" value="{query0_MONTO}" id="monto" class="monto" onchange="extense()" readonly="readonly" size="14">&nbsp;~~~~ &nbsp;&nbsp;&nbsp;</b></td>
+       </tr>
+
+       <tr>
+           <td colspan="2" class="cuerpo" >Lugar y Fecha de emisi&oacute;n: {emp_ciu}, &nbsp;&nbsp;{dia_hoy} &nbsp;&nbsp;de &nbsp;&nbsp;{este_mes} &nbsp;&nbsp;de &nbsp;&nbsp;{este_anio}&nbsp;</td>
+       </tr>
+       <tr>
+           <td colspan="2" class="cuerpo">El d&iacute;a &nbsp;{query0_DIA_VENC}&nbsp;de&nbsp;{query0_MES_VENC_LETRAS}&nbsp;de&nbsp;{query0_ANIO_VENC}&nbsp;
+               pagar&eacute;/mos solidariamente a <b>{denominacion}</b>  o a su orden, sin protesto, la suma de Guaran&iacute;es <span id="monto_en_letras">{monto_en_letras}</span>, por igual valor recibido en Mercader&iacute;as  a mi/nuestra entera satisfacci&oacute;n.
+        <br><br>
+        El pago lo realizar&eacute; en el local de {denominacion} ubicado en <b>{emp_dir}</b> ciudad de <b>{emp_ciu}</b>. &nbsp; La falta de pago del capital a su vencimiento constituir&aacute; al deudor/deudores en mora autom&aacute;tica, de pleno derecho (art. 424 C.C.) 
+        sin necesidad de interpelaci&oacute;n judicial o extrajudicial alguna.
+        
+        En caso de mora se aplicar&aacute;, desde el d&iacute;a de vencimiento un inter&eacute;s moratorio del  2% mensual m&aacute;s un inter&eacute;s
+        punitorio adicional del 0,3% de la tasa a percibirse en concepto de inter&eacute;s moratorio. As&iacute; mismo el presente documento sirve
+        de suficiente autorizaci&oacute;n en forma expresa e irrevocable, otorgando suficiente mandato en los t&eacute;rminos del C&oacute;digo Civil, para que en caso de atraso
+        o mora superior a 90 (noventa) d&iacute;as se incluya mi/nuestro nombre personal y/o raz&oacute;n social que represento/amos en el registro general
+        de morosos de empresas dedicadas y especializadas en almacenar, procesar y/o divulgar informaci&oacute;n comercial. Una vez cancelada la deuda de capital, gastos e intereses,
+        la eliminaci&oacute;n de dicho registro se realizar&aacute; de acuerdo a lo dispuesto en la Ley N&deg; 1682/01 y su modificatoria Ley 1969/02. 
+        A todos los efectos Jur&iacute;dicos acepto/aceptamos la competencia de los Juzgados y Tribunales de la ciudad de Asunci&oacute;n, con expresa renuncia a cualquier otra
+        y constituyo/imos domicilio especial en el lugar se&ntilde;alado m&aacute;s abajo.
+        
+        </td>
+        </tr>
+        <tr><td colspan="2" align="center" style="height:35px;">&nbsp;</td></tr>       
+        
+    </table>
+    </td>
+    </tr>
+
+    <tr><td>
+
+     <table  width="99%" border="0" cellpadding="2" cellspacing="2">
+       <tr><td ><b>Nombre y Apellido/Raz&oacute;n Social:</b> </td> <td> <input class="sub" type="text" size="66" value="{cliente}" />  </td> </tr>
+       <tr><td ><b>C&eacute;dula de Identidad / RUC N&deg;:</b> </td> <td ><input class="sub" type="text" size="66" value="{ci}" /></td> </tr>
+       <tr><td ><b>Domicilio:</b><b></b> </td> <td  ><input class="sub" type="text" size="66" value="{dir}" /></td> </tr>
+       <tr><td ><b>Ciudad:</b><b></b> </td> <td  ><input class="sub" type="text" size="66" value="{ciudad}" /></td> </tr>
+       <tr><td ><b>Tel&eacute;fono:</b><b></b> </td> <td  ><input class="sub" type="text" size="66" value="{tel}" /></td> </tr>
+     </table> 
+    </td></tr>
+ 
+<!-- end:    query0_data_row -->
+<!-- begin: query0_total_row -->
+
+<!-- end:    query0_total_row -->
+<!-- begin: query0_subtotal_row -->
+        <tr><td colspan="2" align="center" style="height:40px;">&nbsp;</td></tr>
+        <tr><td  colspan="2"  align="center" >_______________________________________ </td></tr>
+        <tr><td  class="cuerpo"  colspan="2"  align="center" ><input type="text" value="{cliente}" style="text-align:center" size="80" class="no_border"></td></tr>
+        <tr><td colspan="2" align="center"><b>Deudor/a</b></td></tr>
+	<tr colspan="2" style="height:30px">&nbsp;</tr>        	 
+		<tr><td> 
+	 <table  width="99%" border="0" cellpadding="2" cellspacing="2">
+             <tr><td  colspan="2"  align="left" ><b>Firma por&nbsp; </b>  <input type="text"  size="60" value="{cliente}" class="no_border">  <b>&nbsp;conforme a autorizaci&oacute;n anterior.</b></td></tr>
+       <tr><td  ><b>Nombre y Apellido:</b> </td> <td> <input class="sub" type="text" size="66" value="" />  </td> </tr>
+       <tr><td  ><b>C&eacute;dula de Identidad / RUC N&deg;:</b> </td> <td ><input class="sub" type="text" size="66" value="" /></td> </tr>  
+     </table> 
+	 </td></tr>
+         <tr colspan="2" style="height:40px">&nbsp;</tr>        
+	<tr><td  colspan="2"   align="center" ><b>Firma: </b>_____________________________ </td></tr>	
+        <tr><td colspan="2" align="center"><b>Autorizado</b></td></tr>
+		 
+		 
+<!-- end:    query0_subtotal_row -->
+<!-- begin: end_query0 -->
+    
+</table>
+
+<!-- end:   end_query0 -->

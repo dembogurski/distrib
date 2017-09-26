@@ -1,0 +1,7 @@
+.correct-date {
+	border: 3px solid #148EDA;
+}
+
+.wrong-date {
+	border: 3px solid red;
+}

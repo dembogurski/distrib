@@ -1,0 +1,171 @@
+
+
+<!-- begin: script1 noeval -->
+	<script type="application/x-javascript">
+	 <![CDATA[
+	var startscreen = 0;
+	function changePage(val) {
+		var helpIFrame = document.getElementById("help-iframe");
+		var newPage = val.selectedItem.getAttribute("value");
+		if ( newPage == "close" ) {
+			window.close();
+		}
+		pageCall = page + newPage;
+
+
+// TO DEBUG ONLY 
+//window.open( pageCall, "page" ) ;
+
+		helpIFrame.setAttribute("src", pageCall);
+	
+	}
+	]]>
+	</script>	
+<!-- end:   script1 -->
+
+<!-- begin: doc0 -->
+	<vbox align="center">
+ 		<description value="Manual del Usuario" orient="center"
+		 style="font-size:18pt; font-weight:bold; color:white"/>
+	</vbox>
+	<hbox flex="1">
+		<listbox id="help-list" onselect="changePage(this)">
+			<listitem label="1. Introducion" 		value="1" />
+			<listitem label="2. Menus" 				value="2" />
+			<listitem label="3. Tablas"				value="3" />
+			<listitem label="4. Formularios"		value="4" />
+			<listitem label=""			 />
+			<listitem label="Manual Completo"	value="100" />
+			<listitem label=""			 />
+			<listitem label="Retornar" 				value="close" />
+		</listbox>
+		<splitter id="help-splitter" collapse="after" persist="state"/>
+		<vbox flex="1">
+			<iframe id="help-iframe" flex="1" src=""/>
+		</vbox>
+	</hbox>
+<!-- end:   doc0 -->
+
+<!-- begin: doc1 -->
+	<vbox align="center">
+ 		<description value="Documentacion Simplificada" orient="center"
+		 style="font-size:18pt; font-weight:bold; color:white"/>
+	</vbox>
+	<hbox flex="1">
+		<listbox id="help-list" onselect="changePage(this)">
+			<listitem label="1. Introducion" 		value="1" />
+			<listitem label="2. Menus" 				value="2" />
+			<listitem label="3. Tablas"				value="3" />
+			<listitem label="4. Formularios"		value="4" />
+			<listitem label=""			 />
+			<listitem label="Documentacion completa"	value="100" />
+			<listitem label=""			 />
+			<listitem label="Retornar" 				value="close" />
+		</listbox>
+		<splitter id="help-splitter" collapse="after" persist="state"/>
+		<vbox flex="1">
+			<iframe id="help-iframe" flex="1" src=""/>
+		</vbox>
+	</hbox>
+<!-- end:   doc1 -->
+
+<!-- begin: doc2 -->
+	<vbox align="center">
+ 		<description value="Documentacion Detallada" orient="center"
+		 style="font-size:18pt; font-weight:bold; color:white"/>
+	</vbox>
+	<hbox flex="1">
+		<listbox id="help-list" onselect="changePage(this)">
+			<listitem label="1. Introducion" 		value="1" />
+			<listitem label="2. Menus" 				value="2" />
+			<listitem label="3. Tablas"				value="3" />
+			<listitem label="4. Formularios"		value="4" />
+			<listitem label=""			 />
+			<listitem label="Documentacion completa"	value="100" />
+			<listitem label=""			 />
+			<listitem label="Retornar" 				value="close" />
+		</listbox>
+		<splitter id="help-splitter" collapse="after" persist="state"/>
+		<vbox flex="1">
+			<iframe id="help-iframe" flex="1" src=""/>
+		</vbox>
+	</hbox>
+<!-- end:   doc2 -->
+
+<!-- begin: doc3 -->
+	<vbox align="center">
+ 		<description value="Reporte de Consistencia" orient="center"
+		 style="font-size:18pt; font-weight:bold; color:white"/>
+	</vbox>
+	<hbox flex="1">
+		<listbox id="help-list" onselect="changePage(this)">
+			<listitem label="1. Trustees" 			value="1" />
+			<listitem label="2. Menus" 				value="2" />
+			<listitem label="3. Tablas"				value="3" />
+			<listitem label="4. Formularios"		value="4" />
+			<listitem label=""			 />
+			<listitem label="Reporte Completo"	value="100" />
+			<listitem label=""			 />
+			<listitem label="Retornar" 				value="close" />
+		</listbox>
+		<splitter id="help-splitter" collapse="after" persist="state"/>
+		<vbox flex="1">
+			<iframe id="help-iframe" flex="1" src=""/>
+		</vbox>
+	</hbox>
+<!-- end:   doc3 -->
+
+
+<!-- begin: doc4 -->
+	<vbox align="center">
+ 		<description value="Grafico DIA en formato XML" orient="center"
+		 style="font-size:18pt; font-weight:bold; color:white"/>
+	</vbox>
+	<hbox flex="1">
+		<listbox id="help-list" onselect="changePage(this)">
+			<listitem label="1. Generar DIA" 			value="1" />
+			<listitem label=""			 />
+			<listitem label="Retornar" 				value="close" />
+		</listbox>
+		<splitter id="help-splitter" collapse="after" persist="state"/>
+		<vbox flex="1">
+			<iframe id="help-iframe" flex="1" src=""/>
+		</vbox>
+	</hbox>
+<!-- end:   doc4 -->
+
+<!-- begin: title -->
+	<description value="{title}" orient="left"
+		 style="font-size:18pt; font-weight:bold; color:black"/>
+<!-- end:   title -->
+
+<!-- begin: item -->
+	<description value="{item}" orient="left"
+		 style="font-size:16pt; font-weight:bold; color:black"/>
+<!-- end:   item -->
+
+<!-- begin: subitem -->
+	<description value="{subitem}" orient="left"
+		 style="font-size:14pt; font-weight:bold; color:black"/>
+<!-- end:   subitem -->
+
+<!-- begin: content -->
+	<description value="{content}" orient="left"
+		 style="font-size:12pt; color:black"/>
+<!-- end:   content -->
+
+<!-- begin: content2 -->
+	<description value="{content}" orient="left"
+		 style="font-size:10pt; color:black"/>
+<!-- end:   content2 -->
+
+<!-- begin: content3 -->
+	<description value="{content}" orient="left"
+		 style="font-size:8pt; color:black"/>
+<!-- end:   content3 -->
+
+
+
+
+
+

@@ -1,0 +1,18 @@
+{
+	"name": "dateValidator",
+	"version": "1.0.4",
+	"title" : "jQuery Date Validator",
+	"author": {
+		"name": "LeoNero",
+		"email": "leonardofelipenerone@gmail.com"
+		},
+	"licenses":[
+		{
+			"type": "MIT",
+			"url": "https://raw.githubusercontent.com/LeoNero/jquery-dateValidator/master/LICENSE"
+		}
+	],
+	"dependencies": {
+		"jquery": ">=1.11.1"
+	}
+}

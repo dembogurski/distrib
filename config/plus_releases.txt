@@ -1,0 +1,236 @@
+R_:		31_: 1.2
+
+		August, 04 of 2008
+		New error_reporting control to facilitate installaiion
+		[ all .php files in / ]
+		By: Sérgio A. Pohlmann
+		
+		August, 04 of 2008
+		Prepare a starting system to correct a MySQL error
+		[ plus.php ]
+		By: Sérgio A. Pohlmann
+		
+		August, 04 of 2008
+		Insert a new blank column in browsers, to best look
+		[ form.xul.html ]
+		By: Sérgio A. Pohlmann
+
+		June, 23 of 2008
+		Change a standar languages
+		[ db.user__.php ]
+		[ db.preferences__.php ]
+		By: Sergio Pohlmann
+		
+		June, 21 of 2008
+		New option "preferences" in a Plus menu
+		[ db.preferences__.php ]
+		By: Douglas Dembogurski
+
+Release 1.2.30 - Released in June 10
+
+		June, 11 of 2008
+		To change a color of a browse row with mouseover
+					[ skin.css ]
+		By: Sergio A. Pohlmann
+
+		June, 10 of 2008
+		Correctly return a charset
+					[ plusRPC.php ]
+		By: Douglas Dembogurski and Sergio A. Pohlmann
+		
+		June, 05 of 2008
+		Select fields to relations with select lists
+					[ def_form.php ]
+		By: Douglas Dembogurski
+		
+		May, 29 of 2008
+		Default Zebra effect
+					[ def_form.php ]
+		By: Douglas Dembogurski
+		
+		May, 22 of 2008
+		New RPC with a POST option
+					[ form_engine.js ]
+					[ plusRPC.php ]
+		By: Sergio A. Pohlmann
+		
+		New Option to change a screen resolution
+					[ data.devmenu__.php ]
+					[ db.preferences__.php ]
+		By: Bouglas Dembogurski
+		
+
+29 16 May
+
+		May, 16 of 2008
+		New option "Lock Insert" in a formularies deffinition
+					[ def__form.php ]
+					[ plusexec.php ]
+					
+		New insert routine (faster)
+					[ form_engine.js ]
+		By: Sergio A. Pohlmann
+		
+		
+28 30 Apr
+
+		Apr, 28 of 2008
+		Correction of a FLOAT MySQL Problem
+		[ Y_Engine.class.php ]
+		By Sergio Pohlmann
+		
+		
+27 12 Apr
+
+		Apr, 12 of 2008
+		Correction of an spanish message.
+		[ form_engine.js ] [ I18n]
+		By: Sergio A. Pohlmann
+
+		Apr, 12 of 2008
+		Correction in a trustee to user password form
+		[ form_engine.js ]
+		[ db.user_pass__.php ]
+		By: Sergio A. Pohlmann
+
+26 10 apr
+		
+		Apr, 10 of 2008
+		Correction in a Password bug (the delete button)
+		[ db.user_pass__.php ]
+		By: Sergio A. Pohlmann
+		
+		Apr, 09 of 2008
+		Use of a "inline" in the field formularies
+		[ db.def_form__.php ]
+		By: Sergio A. Pohlmann
+		
+		Mar, 27 of 2008
+		A new compatibility with PHP5. Use a Superglobal variables
+		[ plus.php ]
+		[ plusexec.php ]
+		[ plusinternal.php ]
+		[ plusmenu.php ]
+		[ plusRPC.php ]
+		By: Sergio A. Pohlmann
+		
+		
+25 22 mar
+
+		Mar, 15 of 2008
+		A force update option in a developer menu. This obligate a 
+		system to database integrity verify in the next login.
+		[ engine/es/data.devmenu__.php ]
+		[ engine/en/data.devmenu__.php ]
+		[ engine/br/data.devmenu__.php ]
+		[ engine/es/db.force_update__.php ]
+		[ engine/en/db.force_update__.php ]
+		[ engine/br/db.force_update__.php ]
+		By: Douglas Dembogurski
+		
+		Mar, 22 of 2008
+		Killed a bug of a trustee system to fields
+		[ form_engine.js ]
+		By: Sergio A. Pohlmann
+	
+	
+24 28 feb
+
+		Feb, 28 of 2008
+		A shortest correction in a "Superior" variable in the 
+		subformularies call.
+		[ plusexec.php ] [ Y_Engine_Browse_DB.php ]
+		By: Sergio Pohlmann
+
+23 12 jan
+
+		Jan, 12 of 2008
+		A new Inheritance resource in a fomularies
+		
+		
+22 08 jan 
+
+		Jan, 08 of 2008
+		Small correction to a hasChanged() menthod in a numbers
+			
+
+21 16 nov
+
+		Nov, 16 of 2007
+		New attribute "inline" in a fields. Permit a field to keep 
+		in the same line of the before field.
+		[ functions.php ] [ form_engine.js ] [ def_form__.php ]
+		
+		Translated forms to a protuguese and english languages
+		[ def_form__.php ]
+
+		Nov, 15 of 2007
+		New "Create a new Project" option to a Developer menu.
+		[ plusRPC.php ] [ datadevmenu__.php ] 
+		[ db.new_project__.php ]
+		By Doglas Dembogurski
+		
+
+20 09 nov
+
+		New form may copy a content from an other form.
+		All fields of the other form is copied into a new.
+		[ def_form.php ] [ Y_Engine.class.php ]
+		
+
+19 30 oct
+
+		Correction to a "Windows XP readonly files" Bug
+		[ plus.php ]
+		
+		
+18 26 oct
+
+		Nuevo sistema de selecci—n de relaciones en menu
+		[ Y_Menu_Extract.class.php ] - By Doglas
+		Reconocimiento a la combinaci—n <SHIFT><BACKSPACE>
+		[ form_engine.js ]
+
+
+17 10 oct 	
+		
+		Correcciones en el sistema de filtros.
+		Permite a los usuarios cambiar su password.
+		[ datadevmenu__.php ] [db.user_pass__.php ]
+		[ Y_Engine_Browse_DB.php ]
+
+
+16 31 ago
+
+		Correcci—nen el operation=CHANGE_
+		[ form_engine.js ]
+
+
+15 17 ago	
+
+		Creacion automatica de nuevos proyectos
+		[plus.php]
+		[Y_DB_MySQL.class.php]
+
+
+14 17 ago	
+
+		Nuevo sistema de repositorio de datos permite definir
+		el nombre de la base de repositorio
+		[plus.php]
+		[functions.php]
+		[def_form__.php]
+		[Y_DB.class.php]
+		[plus_RPC.php]
+
+
+13 04 ago	
+
+		Aceptadas las correcciones del beta
+		Ahora acepta archivos .xul.html como templates xul
+		Permite definir ORDER BY en filtros de menu
+		[ plus.php ]
+		[ plusexec.php ]
+		[ plus_internal.php ]
+		[ Y_engine.class.php ]
+

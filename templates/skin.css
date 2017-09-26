@@ -1,0 +1,54 @@
+/**
+*
+* @FileName: skin.css
+* @Date: 06-28-2005
+* @Author: Vaneza Godoy - ycube.net
+*
+* @Changes: Sergio A. Pohlmann <sergio@ycube.net> - 2008
+*/
+
+
+/*textbox*/
+textbox {
+/*	background-color: lightsilver;*/
+  	font-family: Bitstream Vera Sans Mono;
+
+	border-width:2px;
+	margin:4px;
+	text-align:left;
+
+}
+
+
+input:focus {
+	background-color:#F5EDD0;
+}
+
+/* ##### 30  */
+/* To diferenciate in a mouseover */
+listitem:hover {
+	background-color:rgb(207,207,200);
+}
+/* # 30 end  */
+
+/** By Douglas */
+ 
+.login{
+  background-image:url("../images/1.jpg");
+  background-repeat: no-repeat;
+  background-color:white;
+}
+.login_form{
+   background-color:#EADEAF;
+   padding:40px;border-top: 2px solid #bbb;
+   border-left: 2px solid #bbb; 
+   border-bottom: 2px solid #555;
+   border-right: 2px solid #555;
+   padding-right:70px;
+}
+.headerbar{
+  font-family:   cambria, Vera Sans Mono; 
+  background-color:rgb(242,188,0);
+   background-image:url("../images/degrade.jpg");
+ }
+

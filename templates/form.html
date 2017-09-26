@@ -1,0 +1,126 @@
+
+<!-- begin: start_html noeval -->
+<html>
+<head>
+<meta content="text/html; charset=ISO-8859-1" http-equiv="content-type">
+<title>Plus RAD Report</title>
+<style type="text/css" media="print,screen"	>
+	tr.eject  {page-break-after: always;}
+	div.block {page-break-inside: avoid;}
+	thead{ display:table-header-group;}
+	thead:before {content: "XXXX " counter(pages);}
+	tfoot{ display:table-footer-group;}
+	treset_page{ counter-reset: page; }
+	tpage:after { counter-increment: page+1;
+				content: counter(page); }
+</style>
+
+</head>
+<body>
+<treset_page />
+<!-- end:   start_html -->
+
+
+<!-- begin: end_html -->
+<script> 
+	window.print(); 
+	self.close();
+</script> 
+</body>
+</html>
+<!-- end:   end_html -->
+
+<!-- begin: header_OLD -->
+<table style="text-align: left; width: 100%;" border="0"
+ cellpadding="0" cellspacing="2">
+  <tbody>
+    <tr>
+      <td style="width: 184px;">ycube plus RAD [{version}]</td>
+      <td colspan="1" rowspan="2"
+ style="width: 335px; text-align: center;"><big
+ style="font-weight: bold;"><big>{HTML_title}</big></td>
+      <td style="width: 138px; text-align: right;">{time}</td>
+    </tr>
+    <tr>
+      <td>{HTML_name}</td>
+      <td style="text-align: right;">{user}</td>
+    </tr>
+    <tr align="center">
+      <td colspan="3" rowspan="1" style="width: 184px;"></td>
+    </tr>
+  </tbody>
+</table><hr />
+<!-- end:   header -->
+
+<!-- begin: start_list -->
+<table style="text-align: left; width: 100%;" border="0"
+cellpadding="0" cellspacing="2">
+
+	<thead>
+		<tr> <td colspan="50"> 
+			<table style="text-align: left; width: 99%;" border="0"
+			 cellpadding="0" cellspacing="2">
+			  <tbody>
+			  
+				<tr>
+				  <td style="width: 184px;"> </td>
+				  <td style="text-align: center;"><b>{HTML_name}</b></td>
+				  <td style="text-align: right;"><tpage><b>Pagina: </b></tpage></td>
+				</tr>
+				
+				<tr>
+				  <td>
+					<small><small>ycube plus RAD [{version}]</small></small>
+				  </td>
+				  <td style="text-align: center;"><big
+					style="font-weight: bold;"><big>{HTML_title}</big></td>
+				  <td style="text-align: right;">
+					<small><small>{user} - {time}</small></small>
+				  </td>
+				</tr>
+			  </tbody>
+			</table><hr />
+		</td></tr>
+	</thead>
+	<tfoot>
+		<tr><td colspan="50"><hr /></td></tr>
+	</tfoot>
+			
+
+
+
+  <tbody>
+<!-- end:   start_list -->
+
+<!-- begin: end_list -->
+  </tbody>
+</table>
+<!-- end:   end_list -->
+
+<!-- begin: start_list_head -->
+	<tr>
+<!-- end:   start_list_head -->
+<!-- begin: list_head -->
+		<th {align}>{data}</th>
+<!-- end:   list_head -->
+<!-- begin: stop_list_head -->
+	</tr>
+<!-- end:   stop_list_head -->
+
+<!-- begin: start_list_cell -->
+	<tr>
+<!-- end:   start_list_cell -->
+<!-- begin: list_cell -->
+		<td {align} {style}>{HTML_data}</td>
+<!-- end:   list_cell -->
+<!-- begin: stop_list_cell -->
+	</tr>
+<!-- end:   stop_list_cell -->
+
+<!-- begin: start_tot_cell -->
+	</tr>
+<!-- end:   start_tot_cell -->
+
+<!-- begin: tot_cell -->
+		<td style="font-weight:bold;text-align: right;">{HTML_data}</td>
+<!-- end:   tot_cell -->
