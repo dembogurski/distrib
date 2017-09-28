@@ -77,9 +77,9 @@ $old['d_precio'] = '';
 
 //+---------------- Cabecera --------------------+//
  
-$add = $add."+---------- Comercial Ocampos ---------+\n<br>";
+$add = $add."+---------- Ticket Nro: $factura ---------+\n<br>";
 
-$add = $add. "Nro: $factura    Fecha: $date  \n<br>"; 
+$add = $add. "Fecha: $date  \n<br>"; 
  
 $add = $add."Cliente:  $cliente\n<br>"; 
 
